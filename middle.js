@@ -10,7 +10,6 @@ const eqArrays = function(array1, array2) {
 
 const assertArraysEqual = function(array1, array2) {
   eqArrays(array1, array2) === true ? console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`) : console.log(`❌❌❌ Assertion Failed: ${array1} != ${array2}`);
-
 };
 
 const middle = function(array) {
@@ -41,13 +40,13 @@ const getMiddleElement = function(input) {
 
 //OK - returns array
 const getTwoMiddleElements = function(input) {
-  const middleTwo = [input[Math.round(input.length / 2)],input[Math.round(input.length / 2) - 1]];
+  const middleTwo = [input[Math.round(input.length / 2) - 1],input[Math.round(input.length / 2)]];
   return middleTwo;
 };
 
-// const test1 = [1,2,3,4,5];
-// const test2 = ["a","b","c","d"];
-// // console.log(assertArraysEqual(middle(test1)),[3]);
-// // console.log(assertArraysEqual(middle(test2)),["b","c"]);
+const test1 = [1,2,3,4,5];
+const test2 = ["a","b","c","d"];
+console.log(assertArraysEqual(middle(test1),[3]));
+console.log(assertArraysEqual(middle(test2),["b","c"]));
 // console.log(middle(test1));
 // console.log(middle(test2));
