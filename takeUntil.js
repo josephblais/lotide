@@ -26,19 +26,13 @@ const takeUntil = function(array, callback) {
 
   for (let item of array) {
   
-    // console.log(callback(item));
-
-    // while (callback(item) !== true) {
-    //   newArray.push(item);
-    // }
-
-    if (callback(item) !== true) {
+    if (!callback(item)) {
       newArray.push(item);
     } else {
-      break
+      return newArray;
     }
+    
   }
-  return newArray;
 };
 
 //TEST CASES
