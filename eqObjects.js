@@ -1,6 +1,3 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌❌❌ Assertion Failed: ${actual} != ${expected}`);
-};
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -13,6 +10,8 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
+
+// >>>>>>>>>KEEP IN MIND THIS JUST LOGS TRUE OR FALSE; IF YOU WANT THE SAME FUNCTION BUT WITH RETURN VALUE SEE assertObjectsEqual.js<<<<<<<<<
 
 
 // Returns true if both objects have identical keys w/ identical values
