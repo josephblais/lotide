@@ -48,12 +48,12 @@ const eqObjects = function(object1, object2) {
 };
 
 //FUNCTION IMPEMENTATION
-const assertObjectsEqual = function(actual, expected) {
-  // console.log(`Actual:${actual}\nExpected:${expected}`);
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: Actual (${actual}) === Expected (${expected})`);
+const assertObjectsEqual = function(object1, object2) {
+  const inspect = require('util').inspect;
+  if (eqObjects(object1, object2) === true) {
+    console.log(`✅✅✅ Assertion Passed:  ${inspect(object1)} === ${inspect(object2)}`);
   } else {
-    console.log(`❌❌❌ Assertion Failed: Actual (${actual}) != Expected (${expected})`);
+    console.log(`❌❌❌ Assertion Failed: ${inspect(object1)} != ${inspect(object2)}`);
   }
 };
 
@@ -64,7 +64,7 @@ const assertObjectsEqual = function(actual, expected) {
 //TESTS
 const ab = { a: ["1","2"], b: "2"};
 const ba = {b: "2", a: ["1","2"]};
-console.log(assertObjectsEqual(eqObjects(ab,ba),true)); //=>TRUE
+console.log(assertObjectsEqual(ab, ba)); //=>TRUE
 
 // console.log(eqObjects(ab,ba)); //=>TRUE
 
