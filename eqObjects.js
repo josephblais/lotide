@@ -26,8 +26,11 @@ const eqObjects = function(object1, object2) {
   for (const key in object1) {
     //value for each key in object1 === value for same key in object2 -- OK
     if (object1[key] !== object2[key]) {
-      console.log(false);
-      process.exit();
+      // watch out for array comparison!
+      if (Array.isArray(object1[key]) === false) {
+        console.log(false);
+        process.exit();
+      }
     }
     
     //support array value comparisons:
