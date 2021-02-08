@@ -1,8 +1,3 @@
-const eqArrays = require("./eqArrays");
-const assertArraysEqual = require("./assertArraysEqual");
-
-
-
 const middle = function(array) {
   const emptyArray = [];
 
@@ -35,9 +30,4 @@ const getTwoMiddleElements = function(input) {
   return middleTwo;
 };
 
-const test1 = [1,2,3,4,5];
-const test2 = ["a","b","c","d"];
-assertArraysEqual(middle(test1),[3]);
-assertArraysEqual(middle(test2),["b","c"]);
-// console.log(middle(test1));
-// console.log(middle(test2));
+module.exports = middle;
